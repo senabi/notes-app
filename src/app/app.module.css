@@ -1,0 +1,36 @@
+.main {
+  @apply h-screen;
+}
+
+.appHeader {
+  flex: 0 0 auto;
+  @apply flex pt-0 z-10 h-12 items-center sticky top-0 left-0 right-0 bg-transparent;
+}
+
+.appNavbarOuter {
+  @apply fixed top-0 left-0 z-[9] w-full pt-[40px];
+  /* @apply fixed top-0 left-0 z-[9] w-0 pt-[40px]; */
+}
+
+.appNavbarOuter.open {
+  @apply w-full;
+}
+
+.appNavbarInner {
+  width: 300px;
+  transform: translateX(-100%);
+  @apply relative z-[3] flex h-full min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden pt-[12px];
+}
+
+.appNavbarOuter.open .appNavbarInner {
+  transform: translateX(0);
+}
+
+@media (min-width: 700px) {
+  .appNavbarOuter {
+    width: 300px;
+  }
+  .appNavbarOuter.open {
+    width: 300px;
+  }
+}
